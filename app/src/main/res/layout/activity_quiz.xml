@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Quiz"
+    android:padding="10dp"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/Enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:layout_marginTop="21dp"
+        android:text="What is your name? "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
+
+    <EditText
+        android:layout_below="@id/Enter"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Enter your name please"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:id="@+id/ques"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="21dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/ques"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/optionGroup"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ques"
+            android:layout_marginLeft="50dp"
+            android:text=""
+            android:fontFamily="sans-serif"/>
+
+        <RadioButton
+
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/option1"
+            android:layout_marginLeft="50dp"
+            android:text=""
+            android:fontFamily="sans-serif"/>
+
+        <RadioButton
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text=""
+            android:fontFamily="sans-serif"/>
+
+        <RadioButton
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text=""
+            android:fontFamily="sans-serif"/>
+        <RadioButton
+            android:id="@+id/option5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="50dp"
+            android:visibility="gone"
+            android:text=""
+            android:fontFamily="sans-serif"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/optionGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"/>
+
+    <Button
+        android:id="@+id/next"
+        android:onClick="quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Start"
+        android:layout_below="@+id/response"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/next"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif"/>
+
+</RelativeLayout>
